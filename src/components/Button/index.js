@@ -67,13 +67,16 @@ export const Button = ({
         align,
         loading,
       )}
-      startIcon={icon ? <Icon name={icon} className={size} /> : null}
+      startIcon={
+        loading ? (
+          <Icon.Loading strokeWidth={1} size={18} color={loaderColor} trackColor="white" />
+        ) : icon ? (
+          <Icon name={icon} className={size} />
+        ) : null
+      }
       disabled={loading || disabled}
       {...props}
     >
-      {loading ? (
-        <Icon.Loading size={20} strokeWidth={1} color={loaderColor} trackColor="white" />
-      ) : null}
       <span className="contacto-button-content">{label || children}</span>
     </MuiButton>
   )

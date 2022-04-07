@@ -159,11 +159,9 @@
 
   &--loading {
     span.MuiButton-label>*:not(.contacto-loader) {
-      opacity: 0;
     }
 
     span.MuiButton-label .contacto-loader {
-      position: absolute;
     }
   }
 
