@@ -44,7 +44,7 @@ const Custom = ({ type, message }) => {
         <div className="contacto-image">
           <img src={typeToImageMapping[type]} alt="style-guide-text.png" />
         </div>
-        <div>{message}</div>
+        <div className="description">{message}</div>
       </div>
     )
   } else {
