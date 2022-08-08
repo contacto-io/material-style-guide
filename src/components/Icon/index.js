@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import emptySearch from '../../assets/empty-search.svg'
+import emptyNewConversation from '../../assets/empty-new-conversation.svg'
+import apiError from '../../assets/api-error.svg'
+import emptyFolder from '../../assets/empty-folder.svg'
+import activeConversation from '../../assets/active-conversation.svg'
+import addNotes from '../../assets/add-notes.svg'
 import './styles.scss'
 
 const Loading = ({
@@ -20,6 +26,30 @@ const Loading = ({
       }}
     ></span>
   )
+}
+
+const typeToImageMapping = {
+  'empty-search': emptySearch,
+  'empty-new-conversation': emptyNewConversation,
+  'api-error': apiError,
+  'empty-folder': emptyFolder,
+  'active-conversation': activeConversation,
+  'add-notes': addNotes,
+}
+
+const Custom = ({ type, message }) => {
+  if (typeToImageMapping[type]) {
+    return (
+      <div className="sg contacto-image-wrapper">
+        <div className="contacto-image">
+          <img src={typeToImageMapping[type]} alt="style-guide-text.png" />
+        </div>
+        <div>{message}</div>
+      </div>
+    )
+  } else {
+    return null
+  }
 }
 
 /**
@@ -70,6 +100,8 @@ export const Icon = ({ className = '', name, size, color, style, hoverColor, svg
 }
 
 Icon.Loading = Loading
+
+Icon.Custom = Custom
 
 Icon.propTypes = {
   /**

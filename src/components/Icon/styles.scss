@@ -17,6 +17,16 @@
     display: block;
 }
 
+.sg.contacto-image-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .contacto-image {
+        margin-bottom: 24px;
+    }
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg) }
     
