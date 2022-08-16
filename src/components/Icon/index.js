@@ -42,7 +42,7 @@ const Custom = ({ type, message }) => {
     return (
       <div className="sg contacto-image-wrapper">
         <div className="contacto-image">
-          <img src={typeToImageMapping[type]} alt="style-guide-text.png" />
+          <img src={typeToImageMapping[type]} alt={`${type}.png`} />
         </div>
         <div className="description">{message}</div>
       </div>
