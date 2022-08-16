@@ -4,7 +4,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "repository": "git://github.com/contacto-io/contacto-web-app",
-  "version": "0.1.21",
+  "version": "0.1.20",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": [
