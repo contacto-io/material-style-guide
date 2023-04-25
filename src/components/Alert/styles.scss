@@ -8,6 +8,12 @@
   color: var(--base-color);
   background-color: var(--bg-color);
 
+  .contacto-alert-message {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+
   &--small {
     padding: 8px;
     gap: 8px;
@@ -32,5 +38,4 @@
     --base-color: var(--danger-color);
     --bg-color: var(--danger-color-4);
   }
-
 }

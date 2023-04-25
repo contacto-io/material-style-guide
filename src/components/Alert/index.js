@@ -14,7 +14,16 @@ const iconMap = {
 /**
  * Component that is used to show alert messages on the UI
  */
-export const Alert = ({ className = '', type, message, size = 'default', ...props }) => {
+export const Alert = ({
+  className = '',
+  type,
+  message,
+  size = 'default',
+  iconName,
+  iconSvg,
+  children = <></>,
+  ...props
+}) => {
   return (
     <div
       className={[
@@ -26,10 +35,15 @@ export const Alert = ({ className = '', type, message, size = 'default', ...prop
       {...props}
     >
       <div className="contacto-alert-icon">
-        <Icon name={iconMap[type]} size={20} />
+        {iconSvg ? (
+          <Icon svg={iconSvg} size={20} />
+        ) : (
+          <Icon name={iconName ? iconName : iconMap[type]} size={20} />
+        )}
       </div>
       <div className="contacto-alert-message">
         <Text>{message}</Text>
+        {children}
       </div>
     </div>
   )
@@ -52,6 +66,18 @@ Alert.propTypes = {
    * The alert size to be displayed
    */
   size: PropTypes.oneOf(['small', 'default']),
+  /**
+   * The alert's iconName will be used for icon
+   */
+  iconName: PropTypes.string,
+  /**
+   * The alert iconSvg will be used for icon
+   */
+  iconSvg: PropTypes.any,
+  /**
+   * The alert consider children as action component
+   */
+  children: PropTypes.any,
 }
 
 Alert.defaultProps = {}
