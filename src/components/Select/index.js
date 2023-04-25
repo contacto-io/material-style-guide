@@ -115,6 +115,7 @@ export const Select = React.forwardRef(function Select(
           ) : (
             <Icon
               name="expand_more"
+              color={disabled ? 'gray-2' : 'gray-1'}
               onClick={onIconClick}
               className="mui-contacto-select-caret"
               size={20}

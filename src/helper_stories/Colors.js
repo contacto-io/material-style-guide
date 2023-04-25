@@ -83,6 +83,7 @@ const colors = {
   'colors-accent-teal-blue': '#5ac8fa',
   'duck-egg-blue': '#e9f1fc',
   'active-green': '#cef4e6',
+  'note-shadow-color': '#0000001A',
 }
 
 export const ColorBox = (props) => {

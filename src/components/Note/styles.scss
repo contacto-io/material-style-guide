@@ -1,0 +1,46 @@
+.sg.contacto-note {
+  --base-color: var(--primary-color);
+  display: flex;
+  font-size: 0;
+  line-height: 0;
+  color: var(--base-color);
+  background-color: var(--magnolia);
+  padding: 16px;
+  height: 20px;
+  box-shadow: 0px 2px 8px 0px var(--note-shadow-color);
+
+
+  &.expand {
+    height: auto;
+  }
+
+  .expand-icon {
+     background-color: white;
+  }
+
+  &--small {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  &--message {
+    flex:1 1 80%;
+    width:500px;
+    margin-left: 6px;
+    margin-right: 16px;
+  }
+}
+
+.contacto-note-message {
+  flex:1 1 80%;
+  width:500px;
+  min-height: 20px;
+  margin: 2px 16px 0 8px;
+}
+
+.contacto-note-collapse-box {
+ height: 20px;
+ width: 20px;
+ cursor: pointer;
+}
+

@@ -74,7 +74,12 @@ export const Button = ({
       {...props}
     >
       {loading ? (
-        <Icon.Loading size={20} strokeWidth={1} color={loaderColor} trackColor="white" />
+        <Icon.Loading
+          size={size === 'small' ? 18 : 20}
+          strokeWidth={1}
+          color={loaderColor}
+          trackColor="white"
+        />
       ) : null}
       <Text
         className="contacto-button-content"
