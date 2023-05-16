@@ -2,15 +2,20 @@ import React from 'react'
 import './styles.scss'
 import PropTypes from 'prop-types'
 import { Text } from '../Typography/index'
+import { Icon } from '../Icon/index'
+import { Block } from '../Block'
 
 export const TAG_TYPES = ['success', 'danger', 'disabled', 'progress', 'default', 'warning']
 /**
  * Tag component that is used to specify status of a task
  */
-export const Tag = ({ className = '', type, label, children, ...props }) => {
+export const Tag = ({ className = '', type, label, children, icon, ...props }) => {
   return (
     <span className={['sg contacto-tag', className, `contacto-tag--${type}`].join(' ')} {...props}>
-      <Text type={type === 'default' ? 'caption' : 'caption-capital'}>{label || children}</Text>
+      <Block display="flex" alignItems="center">
+        {icon && <Icon name={icon} size={14} className="tag-icon" />}
+        <Text type={type === 'default' ? 'caption' : 'caption-capital'}>{label || children}</Text>
+      </Block>
     </span>
   )
 }
@@ -29,6 +34,7 @@ Tag.propTypes = {
    */
   label: PropTypes.string,
   children: PropTypes.any,
+  icon: PropTypes.string,
 }
 
 Tag.defaultProps = {

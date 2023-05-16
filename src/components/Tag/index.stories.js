@@ -54,3 +54,10 @@ Warning.args = {
   label: 'In Progress',
   type: 'warning',
 }
+
+export const WithIcon = Template.bind({})
+WithIcon.args = {
+  label: 'With Icon',
+  type: 'default',
+  icon: 'visibility',
+}
