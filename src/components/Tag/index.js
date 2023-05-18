@@ -10,12 +10,11 @@ export const TAG_TYPES = ['success', 'danger', 'disabled', 'progress', 'default'
  * Tag component that is used to specify status of a task
  */
 export const Tag = ({ className = '', type, label, children, icon, svg, ...props }) => {
-  const SvgIcon = svg
   return (
     <span className={['sg contacto-tag', className, `contacto-tag--${type}`].join(' ')} {...props}>
       <Block display="flex" alignItems="center">
         {icon && <Icon name={icon} size={14} className="tag-icon" />}
-        {svg && <SvgIcon />}
+        {svg && <Icon svg={svg} size={14} className="tag-icon" />}
         <Text type={type === 'default' ? 'caption' : 'caption-capital'}>{label || children}</Text>
       </Block>
     </span>
