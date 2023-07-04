@@ -1,4 +1,5 @@
 import React from 'react'
+import { ReactComponent as CustomIcon } from '../../assets/ic-account.svg'
 import { Tag, TAG_TYPES } from './'
 
 export default {
@@ -53,4 +54,18 @@ export const Warning = Template.bind({})
 Warning.args = {
   label: 'In Progress',
   type: 'warning',
+}
+
+export const WithIcon = Template.bind({})
+WithIcon.args = {
+  label: 'With Icon',
+  type: 'default',
+  icon: 'visibility',
+}
+
+export const SvgIcon = Template.bind({})
+SvgIcon.args = {
+  label: 'With Icon',
+  type: 'default',
+  svg: CustomIcon,
 }
