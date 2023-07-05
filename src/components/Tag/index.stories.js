@@ -69,3 +69,9 @@ SvgIcon.args = {
   type: 'default',
   svg: CustomIcon,
 }
+
+export const CompactDefault = Template.bind({})
+CompactDefault.args = {
+  label: 'Default Tag',
+  subType: 'compact',
+}
