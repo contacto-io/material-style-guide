@@ -40,4 +40,9 @@
     .tag-icon {
         margin-right: 4px;
     }
+
+    &.compact {
+        padding: 2px 4px 2px 2px;
+        border-radius: 2px;
+    }
 }
