@@ -37,6 +37,21 @@
         color: var(--warning-color);
     }
 
+    &--teamname {
+        padding: 2px 8px;
+        background-color: var(--gray-6);
+        border-radius: 2px;
+        align-items: center;
+        gap: 10px;
+        
+        .contacto-typography {
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 16px;
+            color: var(--gray-1);
+        }
+    }
+
     .tag-icon {
         margin-right: 4px;
     }

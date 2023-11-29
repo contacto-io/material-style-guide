@@ -75,3 +75,9 @@ CompactDefault.args = {
   label: 'Default Tag',
   subType: 'compact',
 }
+
+export const TeamName = Template.bind({})
+TeamName.args = {
+  label: 'Team Name',
+  type: 'teamname',
+}

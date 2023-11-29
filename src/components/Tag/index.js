@@ -5,7 +5,15 @@ import { Text } from '../Typography/index'
 import { Icon } from '../Icon/index'
 import { Block } from '../../components/Block/index'
 
-export const TAG_TYPES = ['success', 'danger', 'disabled', 'progress', 'default', 'warning']
+export const TAG_TYPES = [
+  'success',
+  'danger',
+  'disabled',
+  'progress',
+  'default',
+  'warning',
+  'teamname',
+]
 /**
  * Tag component that is used to specify status of a task
  */
@@ -27,7 +35,13 @@ export const Tag = ({
       <Block display="flex" alignItems="center">
         {icon && <Icon name={icon} size={14} className="tag-icon" />}
         {svg && <Icon svg={svg} size={14} className="tag-icon" />}
-        <Text type={type === 'default' || subType === 'compact' ? 'caption' : 'caption-capital'}>
+        <Text
+          type={
+            type === 'default' || type === 'teamname' || subType === 'compact'
+              ? 'caption'
+              : 'caption-capital'
+          }
+        >
           {label || children}
         </Text>
       </Block>
