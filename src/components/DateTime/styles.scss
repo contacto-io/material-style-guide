@@ -4,41 +4,47 @@
     .MuiInput-underline:after {
         transition: none;
         border-bottom: none;
-      }
+    }
 
     .MuiInput-underline:before {
         content: none;
     }
+
     .MuiInputBase-root {
         cursor: pointer;
     }
+
     .MuiFormHelperText-root {
         display: none;
-      }
+    }
 }
 
 
 
-  .MuiPickersBasePicker-pickerView {
+.MuiPickersBasePicker-pickerView {
     .MuiTypography-root.MuiTypography-body1.MuiTypography-alignCenter {
         font-weight: 600;
     }
+
     .MuiPickersCalendarHeader-dayLabel {
         text-transform: uppercase;
     }
+
     .MuiPickersDay-daySelected {
         background-color: var(--primary-color) !important;
         border-radius: 0 !important;
     }
+
     .MuiPickersDay-day:hover {
         border-radius: 0;
     }
-    
-    .MuiPickersClockPointer-pointer, .MuiPickersClockPointer-thumb {
+
+    .MuiPickersClockPointer-pointer,
+    .MuiPickersClockPointer-thumb {
         background-color: var(--primary-color) !important;
-      }
-    
-      .MuiPickersClock-clock {
+    }
+
+    .MuiPickersClock-clock {
         background-color: var(--gray-6) !important;
-      }
-  }
+    }
+}
