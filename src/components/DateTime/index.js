@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import MomentUtils from '@date-io/moment'
 import { DateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers'
@@ -27,6 +27,8 @@ export const DateTime = ({
   allowOnlyPastDate,
   maxDate,
   placeholder,
+  defaultOpen,
+  minDate,
 }) => {
   const classes = useStyles()
   const [open, setOpenState] = useState(false)
@@ -50,6 +52,12 @@ export const DateTime = ({
   const onOpen = () => {
     setOpenState(true)
   }
+
+  useEffect(() => {
+    if (defaultOpen) {
+      onOpen()
+    }
+  }, [])
 
   const inputValue = value ? moment(value).format(dateTimeFormat) : ''
 
@@ -109,7 +117,9 @@ export const DateTime = ({
             onOpen={onOpen}
             onClose={() => {
               setOpenState(false)
+              if (onClose) onClose(value)
             }}
+            minDate={minDate}
           />
         </div>
       </div>
